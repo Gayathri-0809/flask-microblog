@@ -2,8 +2,6 @@
 
 This is my web application built using **Python** and the **Flask framework**.
 
-# Flask Microblog App 🚀
-
 ---
 
 ## 📌 Project Overview
