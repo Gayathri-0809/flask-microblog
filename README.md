@@ -1,6 +1,6 @@
 # Flask Microblog App 🚀
 
-This is my first web application built using **Python** and the **Flask framework**.
+This is my web application built using **Python** and the **Flask framework**.
 
 ## 📌 Project Overview
 
