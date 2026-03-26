@@ -1,16 +1,5 @@
-<!doctype html>
-<html>
-    <head>
-        <title>{{ title }} - Microblog</title>
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
+{% extends "base.html" %}
 
-        {% for post in posts %}
-            <div>
-                <p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
-            </div>
-        {% endfor %}
-
-    </body>
-</html>
+{% block content %}
+    <h1>Welcome to Microblog!</h1>
+{% endblock %}
