@@ -7,7 +7,7 @@ This is my web application built using **Python** and the **Flask framework**.
 ## 📌 Project Overview
 
 This project is a simple microblog application built using **Flask**.
-It demonstrates how to create dynamic web pages using templates and Python.
+It demonstrates how to create dynamic web pages, handle user input, and build structured backend logic using Python.
 
 ---
 
@@ -20,6 +20,8 @@ It demonstrates how to create dynamic web pages using templates and Python.
 * Basic routing
 * "Hello, World!" web app
 
+---
+
 ### ✅ Chapter 2
 
 * HTML Templates (Jinja2)
@@ -30,15 +32,33 @@ It demonstrates how to create dynamic web pages using templates and Python.
 
 ---
 
+### ✅ Chapter 3
+
+* Implemented web forms using Flask-WTF
+* Created login form (username, password, remember me)
+* Added CSRF protection using SECRET_KEY
+* Handled GET and POST requests
+* Implemented form validation using WTForms
+* Displayed validation error messages
+* Used flash messages for user feedback
+* Implemented redirection after form submission
+* Used url_for() for dynamic routing (best practice)
+
+---
+
 ## 📂 Project Structure
 
-```id="h9xvbb"
+```
 microblog/
 │── app/
 │   ├── __init__.py
 │   ├── routes.py
+│   ├── forms.py
 │   ├── templates/
+│       ├── base.html
 │       ├── index.html
+│       ├── login.html
+│── config.py
 │── microblog.py
 │── .gitignore
 │── venv/
@@ -50,38 +70,38 @@ microblog/
 
 ### 1. Clone the repository
 
-```id="x2d4gu"
+```
 git clone https://github.com/Gayathri-0809/flask-microblog.git
 cd flask-microblog
 ```
 
 ### 2. Create virtual environment
 
-```id="qchub1"
+```
 python -m venv venv
 ```
 
 ### 3. Activate environment
 
-```id="ppl7iy"
+```
 venv\Scripts\activate
 ```
 
 ### 4. Install dependencies
 
-```id="4v69dy"
-pip install flask
+```
+pip install flask flask-wtf
 ```
 
 ### 5. Set environment variable
 
-```id="v2nhfw"
+```
 set FLASK_APP=microblog.py
 ```
 
 ### 6. Run the application
 
-```id="q9q6a3"
+```
 flask run
 ```
 
@@ -91,14 +111,17 @@ flask run
 
 Open browser:
 
-```id="7klp8j"
+```
 http://localhost:5000/
 ```
 
 ### 🔥 Features in UI:
 
 * Displays user greeting
-* Shows dynamic posts (John, Priya, etc.)
+* Shows dynamic posts
+* Login form with validation
+* Error messages for invalid input
+* Flash messages after login
 
 ---
 
@@ -107,10 +130,12 @@ http://localhost:5000/
 * Learned Flask basics
 * Understood Jinja templating
 * Built dynamic web pages
+* Implemented form handling in Flask
+* Learned CSRF protection
+* Implemented validation and user input handling
 * Managed project using Git & GitHub
 
 ---
 
----
+💡 This project is part of my journey to become a skilled developer in Python, web development, and cybersecurity.
 
-💡 This is part of my journey to become a skilled developer in Python and web technologies.
