@@ -66,14 +66,17 @@ microblog/
 │   ├── __init__.py
 │   ├── routes.py
 │   ├── forms.py
+│   ├── models.py
 │   ├── templates/
 │       ├── base.html
 │       ├── index.html
 │       ├── login.html
+│── migrations/
 │── config.py
 │── microblog.py
 │── .gitignore
 │── venv/
+│── app.db
 ```
 
 ---
@@ -102,7 +105,7 @@ venv\Scripts\activate
 ### 4. Install dependencies
 
 ```
-pip install flask flask-wtf
+pip install flask flask-wtf flask-sqlalchemy flask-migrate
 ```
 
 ### 5. Set environment variable
@@ -111,7 +114,15 @@ pip install flask flask-wtf
 set FLASK_APP=microblog.py
 ```
 
-### 6. Run the application
+### 6. Setup database (first time only)
+
+```
+flask db init
+flask db migrate -m "initial migration"
+flask db upgrade
+```
+
+### 7. Run the application
 
 ```
 flask run
@@ -145,8 +156,9 @@ http://localhost:5000/
 * Implemented form handling in Flask
 * Learned CSRF protection
 * Implemented validation and user input handling
+* Integrated database with Flask
 * Managed project using Git & GitHub
 
 ---
 
-💡 This project is part of my journey in Technologies.
+💡 This project is part of my journey to become a skilled developer in Python, web development, and cybersecurity.
