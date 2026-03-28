@@ -42,78 +42,82 @@ It demonstrates how to create dynamic web pages, handle user input, and build st
 * Displayed validation error messages
 * Used flash messages for user feedback
 * Implemented redirection after form submission
-* Used url_for() for dynamic routing (best practice)
+* Used url_for() for dynamic routing
+
+---
+
+### ✅ Chapter 4
+
+* Integrated database using Flask-SQLAlchemy
+* Configured SQLite database (app.db)
+* Created User and Post models
+* Implemented relationships (one user → many posts)
+* Used Flask-Migrate for database migrations
+* Generated and applied migrations
+* Performed basic database operations using Flask shell
 
 ---
 
 ## 📂 Project Structure
 
-```
 microblog/
 │── app/
-│   ├── __init__.py
+│   ├── **init**.py
 │   ├── routes.py
 │   ├── forms.py
+│   ├── models.py
 │   ├── templates/
 │       ├── base.html
 │       ├── index.html
 │       ├── login.html
+│── migrations/
 │── config.py
 │── microblog.py
 │── .gitignore
 │── venv/
-```
+│── app.db
 
 ---
 
 ## 🚀 How to Run the Project
 
-### 1. Clone the repository
+1. Clone the repository
 
-```
-git clone https://github.com/Gayathri-0809/flask-microblog.git
-cd flask-microblog
-```
+   git clone https://github.com/Gayathri-0809/flask-microblog.git
+   cd flask-microblog
 
-### 2. Create virtual environment
+2. Create virtual environment
 
-```
-python -m venv venv
-```
+   python -m venv venv
 
-### 3. Activate environment
+3. Activate environment
 
-```
-venv\Scripts\activate
-```
+   venv\Scripts\activate
 
-### 4. Install dependencies
+4. Install dependencies
 
-```
-pip install flask flask-wtf
-```
+   pip install flask flask-wtf flask-sqlalchemy flask-migrate
 
-### 5. Set environment variable
+5. Set environment variable
 
-```
-set FLASK_APP=microblog.py
-```
+   set FLASK_APP=microblog.py
 
-### 6. Run the application
+6. Initialize database (first time only)
 
-```
-flask run
-```
+   flask db init
+   flask db migrate -m "initial migration"
+   flask db upgrade
+
+7. Run the application
+
+   flask run
 
 ---
 
 ## 🌐 Output
 
 Open browser:
-
-```
 http://localhost:5000/
-```
 
 ### 🔥 Features in UI:
 
@@ -125,6 +129,16 @@ http://localhost:5000/
 
 ---
 
+## 🧠 Database Concepts Used
+
+* Relational Database (SQLite)
+* ORM using SQLAlchemy
+* Database migrations using Alembic
+* One-to-Many relationships
+* Primary & Foreign Keys
+
+---
+
 ## 🎯 Learning Outcome
 
 * Learned Flask basics
@@ -132,10 +146,12 @@ http://localhost:5000/
 * Built dynamic web pages
 * Implemented form handling in Flask
 * Learned CSRF protection
-* Implemented validation and user input handling
+* Integrated database with Flask
+* Understood ORM and relationships
 * Managed project using Git & GitHub
 
 ---
 
-💡 This project is part of my journey to become a skilled developer in Python, web development, and cybersecurity.
+💡 This project is part of my journey in technologies.
+
 
