@@ -161,4 +161,4 @@ http://localhost:5000/
 
 ---
 
-💡 This project is part of my journey to become a skilled developer in Python, web development, and cybersecurity.
+💡 This project is part of my journey in technologies.
