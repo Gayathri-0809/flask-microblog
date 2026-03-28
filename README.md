@@ -73,7 +73,7 @@ microblog/
 │       ├── login.html
 │── migrations/
 │── config.py
-│── microblog.py
+│── run.py
 │── .gitignore
 │── venv/
 │── app.db
