@@ -1,18 +1,31 @@
+<!doctype html>
 <html>
     <head>
-        {% if title %}
-            <title>{{ title }} - microblog</title>
-        {% else %}
-            <title>microblog</title>
-        {% endif %}
+        <title>{{ title }} - Microblog</title>
     </head>
     <body>
         <div>
             Microblog:
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('main.index') }}">Home</a>
+
+            {% if current_user.is_anonymous %}
+                <a href="{{ url_for('main.login') }}">Login</a>
+            {% else %}
+                <a href="{{ url_for('main.logout') }}">Logout</a>
+            {% endif %}
         </div>
         <hr>
+
+        {% with messages = get_flashed_messages(with_categories=false) %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
         {% block content %}{% endblock %}
     </body>
 </html>
