@@ -58,25 +58,40 @@ It demonstrates how to create dynamic web pages, handle user input, and build st
 
 ---
 
+### ✅ Chapter 5
+
+* Implemented secure user authentication system
+* Password hashing using Werkzeug
+* Added login functionality with validation
+* Integrated Flask-Login for session management
+* Implemented logout functionality
+* Protected routes using @login_required
+* Added user session persistence ("remember me")
+* Displayed dynamic navigation (Login / Logout)
+* Handled invalid login attempts with flash messages
+
+---
+
 ## 📂 Project Structure
 
 ```
 microblog/
 │── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── forms.py
-│   ├── models.py
+│   ├── __init__.py        # App factory & Flask-Login setup
+│   ├── routes.py          # Routes (login, logout, protected pages)
+│   ├── forms.py           # WTForms (Login form)
+│   ├── models.py          # User model with password hashing
 │   ├── templates/
-│       ├── base.html
+│       ├── base.html      # Layout + navigation (Login/Logout)
 │       ├── index.html
 │       ├── login.html
 │── migrations/
+│── instance/
+│   ├── app.db             # SQLite database
 │── config.py
 │── run.py
 │── .gitignore
 │── venv/
-│── app.db
 ```
 
 ---
@@ -105,7 +120,7 @@ venv\Scripts\activate
 ### 4. Install dependencies
 
 ```
-pip install flask flask-wtf flask-sqlalchemy flask-migrate
+pip install flask flask-wtf flask-sqlalchemy flask-migrate flask-login email-validator
 ```
 
 ### 5. Set environment variable
@@ -145,6 +160,9 @@ http://localhost:5000/
 * Login form with validation
 * Error messages for invalid input
 * Flash messages after login
+* User login and logout functionality
+* Protected pages (requires login)
+* Persistent login session
 
 ---
 
@@ -158,6 +176,10 @@ http://localhost:5000/
 * Implemented validation and user input handling
 * Integrated database with Flask
 * Managed project using Git & GitHub
+* Implemented secure user authentication system
+* Learned password hashing and verification
+* Integrated Flask-Login for session handling
+* Built protected routes with authentication
 
 ---
 
